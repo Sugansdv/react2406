@@ -1,0 +1,63 @@
+body {
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  transition: background-color 0.3s ease;
+}
+
+.card {
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+body.dark-mode .card {
+  box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.amount-positive {
+  color: #28a745;
+}
+
+.amount-negative {
+  color: #dc3545;
+}
+
+/* Dark mode specific styles */
+.dark-mode .form-control,
+.dark-mode .form-select,
+.dark-mode .input-group-text {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border-color: #495057;
+}
+
+.dark-mode .alert-dark {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border-color: #495057;
+}
+
+.dark-mode .table {
+  color: #f8f9fa;
+}
+
+.dark-mode .text-muted {
+  color: #adb5bd !important;
+}

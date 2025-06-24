@@ -1,0 +1,19 @@
+.nav-link.active {
+  color: #ffc107 !important; 
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+.nav-link{
+  color:White;
+}
+body.modal-open {
+  overflow: hidden;
+}
+
