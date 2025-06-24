@@ -23,13 +23,13 @@ function Home() {
 
   const searchMovies = async (e) => {
     e.preventDefault();
-    const res = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=${fe59de73}`);
+    const res = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`);
     const data = await res.json();
     setMovies(data.Search || []);
   };
 
   return (
-    <div>
+    <div className="container mt-4">
       <form onSubmit={searchMovies} className="input-group mb-4">
         <input
           type="text"

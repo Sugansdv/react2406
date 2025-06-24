@@ -14,11 +14,16 @@ function MovieDetail() {
   }, [id]);
 
   if (!movie) return <p>Loading...</p>;
+  if (movie.Response === 'False') return <p>Movie not found</p>;
 
   return (
-    <div className="row">
+    <div className="row mt-4">
       <div className="col-md-4">
-        <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x400'} className="img-fluid" alt={movie.Title} />
+        <img
+          src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x400'}
+          className="img-fluid"
+          alt={movie.Title}
+        />
       </div>
       <div className="col-md-8">
         <h2>{movie.Title} ({movie.Year})</h2>
@@ -27,7 +32,11 @@ function MovieDetail() {
         <p><strong>Plot:</strong> {movie.Plot}</p>
         <p><strong>Actors:</strong> {movie.Actors}</p>
         <p><strong>Director:</strong> {movie.Director}</p>
-        <a href={`https://www.youtube.com/results?search_query=${movie.Title}+trailer`} target="_blank" rel="noreferrer">
+        <a
+          href={`https://www.youtube.com/results?search_query=${movie.Title}+trailer`}
+          target="_blank"
+          rel="noreferrer"
+        >
           🎞️ Watch Trailer on YouTube
         </a>
       </div>
